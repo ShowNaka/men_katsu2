@@ -1,0 +1,30 @@
+
+= render "shops/header"
+.main
+  %section.mainvisual
+    .mainvisual__content
+      %h2
+        %br
+        MEN-KATSU
+      %p.content__text
+        MEN-KATSUは「らー活」専用アプリです。
+        %br
+        他人のレビューは関係ありません。
+        %br
+        あなただけのらーめんマップを作りましょう。
+  .main__shops
+    .main__shops__top
+      お店リスト
+
+    %ul.main__shops__box
+      - @shops.each do |shop|
+        %li.main__shops__box--new
+          =link_to shop_path(shop.id), class: "show-btn" do
+            .comment
+              .comment--name
+                = shop.name
+              .comment--accsess
+                = shop.prefecture.name
+                = shop.address
+
+= render "shops/footer"

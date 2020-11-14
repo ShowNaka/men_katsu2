@@ -1,0 +1,18 @@
+.header
+  .header__lists
+    .logo
+      %h1
+      = link_to root_path do
+        = image_tag asset_path("ra-men-logo.png"), size: '60x60'
+    .search-box
+      = form_with(url: search_shops_path, local: true, method: :get, class: "search-box") do |form|
+        = form.search_field :keyword, placeholder: "キーワードから探す", class: "#searchInput.searchBox--input" 
+        .search-box__icon
+          = button_tag type: 'submit', class: 'search-btn' do
+            = image_tag asset_path("icon-search 1.png"), alt: "icon-search 1.png エラー", size: '10x10'
+    .nav
+      %ul.nav__lists
+        %li
+          = link_to "系統"
+        %li.listsleft__item
+          = link_to "ジャンル"

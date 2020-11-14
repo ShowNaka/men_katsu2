@@ -1,0 +1,46 @@
+= render "shops/header"
+.shop-index
+  .shop-form
+    = form_for @shop, class: "form-details" do |f|
+      
+      .form-group
+        %label
+          店名
+        .form-group__details
+          = f.text_field :name, placeholder: "入力してください"
+      
+      .form-group
+        %label
+          系統
+        .form-group__details
+          = f.collection_select :type_id, Type.all, :id, :name, prompt: "選択してください"
+      
+      .form-group
+        %label
+          都道府県
+        .form-group__details
+          = f.collection_select :prefecture_id, Prefecture.all, :id, :name, prompt: "選択してください"
+      
+      .form-group
+        %label
+          市区町村・番地
+        .form-group__details
+          = f.text_field :address,  { class: ' ', placeholder: "例) 世田谷区世田谷1-1-1", value: '' }
+
+      
+      .form-group
+        %label
+          ビル名・マンション名
+        .form-group__details
+          = f.text_field :building_name,  { class: ' ', placeholder: "例) Tokyoビル1F", value: '' }
+      
+      .form-group
+        %label
+          店の概要
+        .form-group__details
+          = f.text_area :feelings, placeholder: "雰囲気・自己評価など", rows: "3", class: "text-area"
+      .form-group
+        .form-group__push
+          = f.submit "登録する", class: 'btn'
+            
+= render "shops/footer"

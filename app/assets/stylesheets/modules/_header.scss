@@ -1,0 +1,63 @@
+.header {
+  height: 120px;
+  width: 100%;
+  &__lists {
+    display: flex;
+    padding: 30px 100px;
+    justify-content: center;
+    .logo{
+      margin-right: 60px;
+    }
+    .search-box{
+      width: 60%;
+      margin-top: 10px;
+      form {
+        width: 100%;
+        display: flex;
+        margin-bottom: 10px;
+      }
+      // 検索ボタン
+      button {
+        width: 36px;
+        border: 0;
+        cursor: pointer;
+        background-color: #f74a4a;
+        padding: 10px;
+      }
+      input {
+        width: calc(100% - 26px);
+        height: 36px;
+        padding: 0 0 0 5px;
+        text-rendering: auto;
+        color: -internal-light-dark-color(black, white);
+        letter-spacing: normal;
+        word-spacing: normal;
+        text-transform: none;
+        text-indent: 0px;
+        text-shadow: none;
+        display: inline-block;
+        text-align: start;
+        -webkit-appearance: textfield;
+        background-color: -internal-light-dark-color(white, black);
+        -webkit-rtl-ordering: logical;
+        cursor: text;
+        margin: 0em;
+        // font: 400 11px system-ui;
+        border-width: 2px;
+        border-style: inset;
+        border-color: initial;
+        border-image: initial;
+      }
+    }
+    .nav {
+      margin: 10px 0 0 60px;
+      &__lists{
+        li {
+          a {
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+}

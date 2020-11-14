@@ -1,0 +1,37 @@
+.footer
+  %ul.contents
+    %li.content
+      %h2.content__head MEN-KATSUついて
+      %ul
+        %li
+          = link_to "会社概要（運営会社）",root_path, class:"btn"
+        %li
+          = link_to "プライバシーポリシー",root_path, class:"btn"
+        %li
+          = link_to "利用規約",root_path, class:"btn"
+
+    %li.content
+      %h2.content__head MEN-KATSUを見る
+      %ul
+        %li
+          = link_to "系統",root_path, class:"btn"
+        %li
+          = link_to "ジャンル",root_path, class:"btn"
+    %li.content
+      %h2.content__head ヘルプ＆ガイド
+      %ul
+        %li
+          = link_to "MEN-KATSUガイド",root_path, class:"btn"
+        %li
+          = link_to "ロゴ利用ガイドライン",root_path, class:"btn"
+        %li
+          = link_to "お知らせ",root_path, class:"btn"
+  .footer__logo
+    = link_to root_path do
+      = image_tag asset_path("ra-men-logo.png"), size: '50x50'
+  %p © MEN-KATSU
+
+.seller-content
+  = link_to new_shop_path do
+    .exhibition-btn
+      %span.exhibition-btn__text お店を登録
