@@ -1,0 +1,36 @@
+.shop-index{
+  background-color: lightsteelblue;
+  padding:40px 0 40px 0;
+  .shop-form{
+    width: 50%;
+    background-color: white;
+    margin: 0 auto;
+    .form-group{
+      padding-top: 40px;
+      text-align: center;
+      
+      & label{
+        font-weight: 600;
+      }
+      &__details{
+        width: 100%;
+        .text-area{
+          width: 50%;
+        }
+      }
+      &__push{
+        padding-bottom: 40px;
+        .btn{
+          width: 40%;
+          padding: 10px;
+          font-weight: bold;
+          color: white;
+          text-decoration: none;
+          background-color: #f74a4a;
+          cursor: pointer;
+          border: 1px solid
+        }
+      }
+    }
+  }
+}

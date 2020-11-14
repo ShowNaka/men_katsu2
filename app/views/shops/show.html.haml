@@ -1,0 +1,38 @@
+= render "shops/header"
+.product-main
+  .product-main__show
+    .top-content
+      .products-box
+        %h2.products-box__name
+          = @shop.name
+        .map{id: "show-map", style: "height: 320px; width: 100%;"}
+
+        .products-box__info
+          %table
+            %tbody
+              %tr
+                %th 系統
+                %td
+                  = @shop.type.name
+              %tr
+                %th 住所
+                %td
+                  = @shop.prefecture.name
+                  = @shop.address
+                  = @shop.building_name
+              %tr
+                %th 店の雰囲気
+                %td
+                  = @shop.feelings
+
+
+
+          .purchase-btn
+            = link_to "らーめんを記録する", class:"purchase-btn__text"
+
+          .edit-btn
+            -# = link_to "編集する", edit_item_path(@item.id), class:"edit-btn__text"
+          .delete-btn
+            = link_to '削除する', shop_path, method: :delete, class:"delete-btn__text"
+
+= render "shops/footer"
